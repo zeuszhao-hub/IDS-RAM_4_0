@@ -1,5 +1,7 @@
 ## Big Data and Artificial Intelligence ##
 
+大数据和人工智能
+
 Today companies make a wide use of Big Data applications. The common use
 case is to complement data available within the company by additional
 data (e.g. open data, data from other companies or data from data

@@ -7,10 +7,14 @@ In the Control Phase, both Participants pass multiple processes (Data Offering
 communication protocol. The respective protocol bindings are defined in the
 [IDS-G](https://github.com/International-Data-Spaces-Association/IDS-G).
 
+在成功的 Onboarding（见第3.4.1节）后， 数据消费者或数据提供者的操作可以分配给两个阶段：控制阶段和传输阶段。 在控制阶段，两个参与方通过多个流程（数据提供（请参见第 3.4.2 节）和合同谈判（请参见第 3.4.3 节））使用 IDS -specific 通信协议准备数据传输。 相应的协议绑定在 IDS-G 中定义。
+
 In the Transfer Phase, if all aforementioned processes were successfully finished, the Data Consumer
 and the Data Provider can start to actually exchange data by invoking a Data Operation (e.g., data
 upload or download, data transformation, or data query) via their IDS Connectors. How this can be
 done is described in the following.
+
+在传输阶段，如果所有前述流程都已成功完成，数据消费者和数据提供者可以通过调用数据操作（例如，数据上传或下载，数据转换或数据查询）来实际交换数据，通过他们的 IDS 连接器进行数据交换。 下面描述了如何完成此操作。
 
 ![Communication Phases](media/communication-phases.png)
 
@@ -21,6 +25,8 @@ initiated by a Connector that refers to a Contract Agreement. As the subsequent 
 be bound to neither a communication protocol nor to a communication pattern, this can be implemented
 differently, as stated in the following. For this to work, a Data Operation request requires
 information that enables technical automation (e.g., authentication information, or protocol details).
+
+调用数据操作是控制阶段的一部分，如图[3.4.4.1]中所示，并由引用合同协议的连接器发起。由于后续序列不应绑定到特定的通信协议或通信模式上，因此可能以不同的方式实现，如下所述。为了使其正常工作，数据操作请求需要提供信息以启用技术自动化（例如，身份验证信息或协议详细信息）。
 
 #### Communication Pattern ####
 

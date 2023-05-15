@@ -1,24 +1,32 @@
 ### ROLES IN THE INTERNATIONAL DATA SPACES ###
 
+国际数据空间的角色定义
+
 In the following, each role a participant can assume in the
 International Data Spaces is described in detail, together with the
 tasks assigned to it. The Reference Architecture model distinguishes
 four "categories" containing "business roles" that, depending on the
 individual business model, can assume one or more of the "basic roles".
 
+以下是国际数据空间中参与者可能扮演的每个角色的详细描述，以及分配给它的任务。参考架构模型区分包含“业务角色”的四个“类别”，这些“业务角色”可以根据个人的商业模式扮演一个或多个“基本角色”。
+
 #### Basic Roles in the International Data Space ###
+
+国际数据空间中的基本角色
 
 The ecosystem of the IDS comprises several basic tasks being carried out
 by the various participants. The set of these tasks can be derived from
 relevant objects in the IDS and the activities along the respective life
 cycle. IDS objects that participants in the IDS have to handle are:
 
+IDS的生态系统由各种参与者执行的几个基本任务组成。这些任务集合可以从IDS中相关的对象以及其所在生命周期的活动中推导出来。在IDS中，参与者必须处理的对象包括：
+
 1.  **Connector**: technical core component required for a participant
     to join the International Data Spaces
-
+    加入国际数据空间所需的技术核心组成部分。
 2.  **Data**: here synonym to Data Asset, i.e. content exposed for
     exchange by the Data Provider
-
+    这里的同义词是“数据资产”，即由数据提供者提供以进行交换的内容。
 3.  **Vocabulary**: ontologies, reference data models, or metadata
     elements that can be used to annotate and describe datasets, usage
     policies, apps, services data sources etc.
@@ -35,6 +43,9 @@ cycle. IDS objects that participants in the IDS have to handle are:
 
 7.  **Service**: software running in a connector and provided as a
     service (algorithm and computing time)
+
+
+
 
 For each of these IDS objects, the Reference Architecture Model defines
 activities along the life cycle define. The set of activities, or a

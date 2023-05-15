@@ -4,9 +4,13 @@ The Functional Layer defines -- irrespective of existing technologies
 and applications -- the functional requirements of the International
 Data Spaces, and the features to be implemented resulting thereof.
 
+功能层定义国际数据空间的功能要求和需要实现的功能特性，而不考虑现有的技术和应用程序。
+
 ![ Functional architecture of the International Data
 Spaces](./media/image21.png)
 ##### Figure 3.2: Functional architecture of the International Data Spaces
+
+图3.2：国际数据空间的功能架构
 
 The figure above
 shows the functional architecture of the International Data Spaces,
@@ -15,10 +19,16 @@ to be provided by the IDS. These six groups comply with the strategic
 requirements outlined in Section
 [Goals of the International Data Spaces](../../1_Introduction/1_1_Goals_of_the_International_Data_Spaces.md).
 
+上图展示了国际数据空间的功能架构，将要求细分为六个软件功能组，这些组由IDS提供。这六个功能组符合第[Hierarchical Structure Perspective](Hierarchical Structure Perspective)中概述的战略要求。
+
 The following subsections give a brief summary of these functional
 requirements.
 
+以下各小节给出这些功能要求的简要概述。
+
 ### Trust ##
+
+可信
 
 Although requirements related to trust are usually non-functional, they
 are addressed by the Functional Layer, since they represent fundamental
@@ -27,7 +37,11 @@ comprises three main aspects (roles, identity management, and user
 certification), which are complemented by governance aspects (see
 Section on [Data Governance](../../4_Perspectives_of_the_Reference_Architecture_Model/4_3_Governance_Perspective/4_3_1_Layers.md).
 
+尽管与信任相关的要求通常是非功能性的，但它们由功能层来处理，因为它们代表了国际数据空间的基本特征。信任组包括三个主要方面（角色、身份管理和用户认证），这些方面还有治理方面的补充（请参见[数据治理]一节）。
+
 #### Roles ###
+
+角色
 
 Each role in the International Data Spaces has certain rights and
 duties. For example, the Identity Provider is responsible for offering
@@ -35,20 +49,32 @@ services to create, maintain, manage, monitor, and validate identity
 information of and for participants in the International Data Spaces.
 More information about the roles is given in the [Business Layer](../3_1_Business_Layer/3_1_1_Roles_in_the_IDS.md).
 
+国际数据空间中的每个角色都有一定的权利和责任。例如，身份提供者负责提供服务来创建、维护、管理、监控和验证国际数据空间参与者的身份信息。有关这些角色的更多信息可以在[业务层]中找到。
+
 #### Identity Management ###
+
+身份认证
 
 Every Connector participating in the International Data Spaces must have
 a unique identifier and a valid certificate. In addition, each Connector
 must be able to verify the identity of other Connectors (with special
 conditions being applied here; e.g., security profiles).
 
+参与国际数据空间的每个连接器都必须具有唯一的标识符和有效的证书。此外，每个连接器必须能够验证其他连接器的身份（这里应用了特殊条件；例如，安全配置文件）。
+
 #### User Certification ####
+
+用户认证
 
 Each participant in the International Data Spaces must undergo
 certification in order to establish trust among all participants. More
 information about the certification process is given in the [Certification Perspective](../../4_Perspectives_of_the_Reference_Architecture_Model/4_2_Certification_Perspective/4_2_Certification_Perspective.md).
 
+为了在所有参与者之间建立信任，国际数据空间中的每个参与者都必须进行认证。有关认证过程的更多信息可以在[认证视角]中找到。
+
 ### Security and Data Sovereignty ###
+
+安全和数据主权
 
 Like requirements related to trust, requirements related to security and
 data sovereignty are also usually non-functional, but are still
@@ -58,7 +84,11 @@ sovereignty group contains four major aspects: authentication
 authorization; usage policies  usage enforcement; trustworthy
 communication  security by design; and technical certification.
 
+与信任相关的要求一样，与安全和数据主权相关的要求通常也是非功能性的，但仍由功能层处理，因为它们代表国际数据空间的基本特征。安全和数据主权组包括四个主要方面：身份验证授权；使用政策和使用执行；值得信赖的通信和安全设计；以及技术认证。
+
 #### Authentication & Authorization ####
+
+身份认证与授权
 
 Each Connector must have a valid X.509 certificate (or equivalent). With the help of
 this certificate, each participant in the International Data Spaces that
@@ -66,11 +96,17 @@ operates an endpoint is able to verify the identity of any other
 participant. Certain conditions (e.g. security profiles) may also apply
 here. More information about authentication is given in the [Security Perspective](../../4_Perspectives_of_the_Reference_Architecture_Model/4_1_Security_Perspective/4_1_Security_Perspective.md).
 
+每个连接器都必须拥有有效的X.509证书（或等效证书）。借助此证书，国际数据空间中运行端点的每个参与者都能够验证任何其他参与者的身份。某些条件（例如安全配置文件）也可能适用于此处。有关身份验证的更多信息可以在[安全视角]中找到。
+
 The Connector serving as the data source must be able to verify the
 receiving Connector's capabilities and security features as well as its
 identity. More information about authorization is given in the [Security Perspective](../../4_Perspectives_of_the_Reference_Architecture_Model/4_1_Security_Perspective/4_1_Security_Perspective.md).
 
+作为数据源的连接器必须能够验证接收连接器的功能和安全特性以及其身份。有关授权的更多信息可以在[安全视角]中找到。
+
 #### Usage Policies & Usage Enforcement ####
+
+使用政策和使用执行
 
 In the IDS, Data Owners and Data Providers can always be sure their data
 is handled by a Data Consumer according to the usage policies specified.
@@ -80,7 +116,11 @@ persistence of data, or disallowing transfer of data to other parties,
 for example. More information about usage policies and usage enforcement
 is given in the [Security Perspective](../../4_Perspectives_of_the_Reference_Architecture_Model/4_1_Security_Perspective/4_1_Security_Perspective.md).
 
+在IDS中，数据所有者和数据提供者始终可以确信他们的数据按照指定的使用政策由数据使用方处理。每个参与者都可以定义使用政策并将其附加到出站数据上。这些策略可能包括限制，例如禁止持久化数据或禁止将数据传输给其他方。有关使用政策和使用执行的更多信息可以在[安全视角]中找到。
+
 #### Trustworthy Communication & Security by Design ####
+
+可靠的通讯和安全设计
 
 Connectors, App Stores, and any Metadata Broker can check if the Connector of the
 connecting party is running a trusted (i.e. certified) software stack.
@@ -95,6 +135,8 @@ decide about the level of security to be applied for their respective
 Connectors by deploying Connectors supporting the selected security
 profile. More information about trustworthy communication and security
 by design is given in the [Security Perspective](../../4_Perspectives_of_the_Reference_Architecture_Model/4_1_Security_Perspective/4_1_Security_Perspective.md).
+
+连接器、应用商店和任何元数据经纪人都可以检查连接方的连接器是否运行了可信的（即经过认证的）软件堆栈。任何（外部）连接器之间的通信都可以进行加密和完整性保护。每个数据所有者和数据提供者必须能够确保其数据按照指定的使用政策由数据使用者的连接器进行处理，否则数据将不会被发送。为减少受损应用程序的影响，必须采取适当的技术措施（例如将数据应用程序相互隔离和与连接器隔离）。数据提供者和数据消费者可以通过部署支持所选安全配置文件的连接器来决定为其各自的连接器应用的安全级别。有关可信通信和安全设计的更多信息可以在[安全视角]中找到。
 
 #### Technical Certification ####
 

@@ -1,16 +1,32 @@
 ### Onboarding of an IDS Connector and its Operator ###
 
+连接器引入
+
 The overall 'Onboarding' process requires of two preparational steps required for an organization to act as Data Provider or Data Consumer in the International Data Spaces:
+
+整个“入门”过程需要两个准备步骤，以使组织能够在国际数据空间中作为数据提供者或数据消费者进行操作。
 
 1. Registration and certification of the organization.
 2. Acquiring a certified IDS connector.
+ 
+ 
+1. 注册和认证组织
+2. 获得一个经过认证的IDS连接器
 
 Based on those prerequisites, an organization can instantiate an arbitrary number of IDS connector instances with the following steps:
+
+基于这些先决条件，组织可以执行以下步骤来实例化任意数量的IDS连接器实例
 
 1. Provisioning and configuring the connector.
 2. Availability setup.
 
+
+1. 提供和配置连接器。
+2. 可用性设置。
+
 All necessary steps are illustrated in the following figure.
+
+所有必要的步骤如下图所示：
 
 ![Onboarding process](./media/onboarding_process.png)
 ##### _Fig. 3.4.1.1: Onboarding process_
