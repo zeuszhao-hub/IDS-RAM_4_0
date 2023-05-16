@@ -2,7 +2,11 @@
 
 The interoperability requirements in the IDS directly lead to the usage of commonly known, standardized terms to describe data, services, contracts, and so on. Collection of these standardized identifiers form so-called vocabularies. In the most basic appearance, any list of controlled terms can be a vocabulary. To make use of their content, the respective vocabulary documents need to be shared between the relevant parties. This can be done through digital catalogs but also in printed forms like for instance a language dictionary.
 
+正确性和互操作性的要求在IDS中直接导致使用通用已知的、标准化的术语来描述数据、服务、合同等。这些标准标识符的集合形成了所谓的词汇表。在最基本的形式中，任何受控术语列表都可以成为词汇表。为了利用它们的内容，需要在相关方之间共享相应的词汇表文件。这可以通过数字目录来完成，也可以以印刷形式进行，例如语言词典。
+
 In the IDS, however, further requirements occur. The terms of the vocabulary must be machine-readable, also to some degree their descriptions and titles, as well as new terms must be available for lookups. As stated in [Section 3.4](../3_4_Information_Layer), the IDS relies in RDF to encode its attributes and data descriptions. The IDS Information Model is the central vocabulary that all parties of any IDS share.
+
+然而，在IDS中，还会出现其他要求。词汇表的术语必须是机器可读的，它们的描述和标题也必须在某种程度上可读，同时新术语必须可供查询。正如[第3.4节](../3_4_Information_Layer)中所述，IDS依赖于RDF来编码其属性和数据描述。IDS信息模型是所有IDS参与方共享的中央词汇表。
 
 Nevertheless, the IDS Information Model only represents the lowest common denominator of all IDS use cases. It is therefore the minimal set of terms all IDS components must understand. In specific domains, however, more and more expressive terms are needed. It is therefore a good practice to extend the basic information model with additional vocabularies and provide them in the same ways as the core one.
 

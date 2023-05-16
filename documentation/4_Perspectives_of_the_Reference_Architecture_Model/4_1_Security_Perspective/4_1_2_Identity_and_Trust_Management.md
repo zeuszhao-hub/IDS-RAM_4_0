@@ -3,10 +3,14 @@
 The International Data Spaces allow participants a cross-company data exchange. In many cases, the participants intending to exchange data have no prior knowledge about the other company and its utilized components to properly assess the consequences of such a data exchange. Thus, the IDS offers mechanisms to gain reliable information which help to establish trust and enable participants to make sovereign and informed decisions.
 Identity and trust management is rooted in the components described in ([Section 3.5.1](../../3_Layers_of_the_Reference_Architecture_Model/3_5_System_Layer/3_5_1_Identity_Provider.md#identity-provider)).
 
+国际数据空间允许参与者进行跨公司数据交换。在许多情况下，意图交换数据的参与者没有关于其他公司及其所使用的组件的先前知识，以便正确评估此类数据交换的后果。因此，IDS提供了机制来获取可靠的信息，以帮助建立信任并使参与者做出独立和知情的决策。身份和信任管理源于[第3.5.1节](../../3_Layers_of_the_Reference_Architecture_Model/3_5_System_Layer/3_5_1_Identity_Provider.md#identity-provider)中描述的组件。
+
 #### Identities for Devices ####
 
 The IDS Connector is the central device to establish trust on a technical level and to ensure a secure data exchange across domain boundaries.
 In the IDS, each connector instance possesses it's own identity. Each connector instance is made up of several aspects:
+
+IDS连接器是在技术层面建立信任和确保跨域边界进行安全数据交换的核心设备。在IDS中，每个连接器实例都拥有自己的身份。每个连接器实例由多个方面组成：
 
 * The platform the IDS Connector instance depends on. A platform consists of hardware, firmware, operating system and (container) run-time environment.
 * The Connector Core Services software artifacts that provide management functionality and IDS interoperability.
@@ -14,11 +18,25 @@ In the IDS, each connector instance possesses it's own identity. Each connector 
 * The IDS Apps or other services (e.g., Clearing House services) that are bound to this connector instance.
 [Section 3.5.2](../../3_Layers_of_the_Reference_Architecture_Model/3_5_System_Layer/3_5_2_IDS_Connector.md#ids-connector) provides more details for the different parts of a connector.
 
+
+* IDS Connector实例所依赖的平台，包括硬件、固件、操作系统和（容器）运行时环境。
+* 提供管理功能和IDS互操作性的连接器核心服务软件构件。
+* IDS连接器的配置（定义的数据路由、配置的使用控制框架）。
+* 绑定到此连接器实例的IDS应用程序或其他服务（例如清算所服务）。
+
+[第3.5.2节](../../3_Layers_of_the_Reference_Architecture_Model/3_5_System_Layer/3_5_2_IDS_Connector.md#ids-connector)提供了有关连接器不同部分的更多详细信息。
+
 The IDS Certification is explained in [Section 4.2](../4_2_Certification_Perspective/4_2_Certification_Perspective.md#certification-perspective). It is always conducted for a blueprint of the entire stack consisting of platform and Connector Core Services. Each such certified blueprint can be instantiated multiple times.
+
+IDS认证在[第4.2节](../4_2_Certification_Perspective/4_2_Certification_Perspective.md#certification-perspective)中进行解释。它始终针对由平台和连接器核心服务组成的整个堆栈的蓝图进行。每个这样经过认证的蓝图都可以实例化多次。
 
 The IDS Connector identity serves to uniquely identify one such instance of the Connector Core Services with their IDS Apps on qualified platforms. The identity concept is equally used for other technical components such as Broker Services, DAPS, ... in the IDS which have their own Core Services (represented by one or multiple containers) running on a comparable platform.
 
+IDS Connector的身份用于唯一标识具有其IDS应用程序的Connector Core Services的一个实例，并在合格平台上运行。身份概念同样用于IDS中的其他技术组件，例如Broker服务、DAPS等，在此类组件中，它们有自己的Core Services（由一个或多个容器表示）在可比平台上运行。
+
 One component always is characterized by the combination of platform and service instances. As an example, this Connector instance is running several data apps. The identity is comprised of the platform, the Connector Core Services and the deployed Data Apps.
+
+一个组件始终由平台和服务实例的组合来进行特征化。以此Connector实例为例，它正在运行多个数据应用程序。身份包括平台、连接器核心服务和部署的数据应用程序。
 
 ![Components SW Stack](./media/SW_Stack_Components_connector_blueprint.png)
 ##### Figure 4.1.2.1: Components of the Software Stack of an IDS Connector
@@ -26,6 +44,8 @@ One component always is characterized by the combination of platform and service
 ##### Component Identifier #####
 
 The identity of a combination of platform and service instance is bound to an identifier for the service instance.
+
+平台和服务实例的组合身份与服务实例的标识符绑定在一起。
 
 * Each component gets a unique identified (C_UID) bound to the service instance.
 * The uniqueness of this identifier is ensured by the Identity Provider.
@@ -64,9 +84,13 @@ In addition to these static artifacts, the connector operator may add additional
 
 All this metadata is provided in machine-readable form. Manifest information for each artifact, such as manifests for all software components, operating system or apps are attached to the artifact itself and will be provided by the IDS Connector that hosts the artifact. Verified Company Descriptions are also provided by IDS Connectors itself, since the ParIS only provides unverified information. Dynamic attributes for each IDS Connector as well as revocation information for Software Manifests are provided by the DAPS.
 
+所有这些元数据都以机器可读的形式提供。针对每个文件的清单信息，例如所有软件组件、操作系统或应用程序的清单，都将附加到文件本身，并由托管文件的IDS Connector提供。由于ParIS仅提供未经验证的信息，因此验证的公司描述也由IDS Connectors本身提供。DAPS提供每个IDS Connector的动态属性以及软件清单的吊销信息。
+
 ##### Interactions between IDS Connectors and Identity Components #####
 
 To establish a trusted connection, each connector needs the identity information of the corresponding connector to perform access and usage control decisions. The interactions can be depicted as follows:
+
+为建立可信连接，每个连接器需要相应连接器的身份信息，以执行访问和使用控制决策。交互可以描述如下：
 
 ![Interaction between IDS Connectors and Identity Components](./media/IdM_Interactions.png)
 ##### Figure 4.1.2.3: Interaction between IDS Connectors and Identity Components
@@ -75,13 +99,27 @@ To establish a trusted connection, each connector needs the identity information
 2. Each IDS Connector requests a current Dynamic Attibute Token from DAPS.
 3. When establishing communication, the DAT of both IDS Connector instances is exchanged. This is also matched with the used TLS certificate.
 
+
+1. 每个IDS Connector从IDS设备CA获取有效的身份证书。
+2. 每个IDS Connector从DAPS请求当前的动态属性令牌。
+3. 在建立通信时，交换两个IDS Connector实例的动态属性令牌。这也与使用的TLS证书匹配。
+
 To reduce the risk of an attacker abusing a DAT, these DATs should only be disclosed to other communication partnes at will.
 To further protect from attacks performed with leaked DATs, each Connector has to validate the certificate used for the TLS connection against the DAT in one of the following two ways:
+
+为减少攻击者滥用DAT的风险，这些DAT应仅按需披露给其他通信方。
+为进一步防止滥用泄露的DAT进行攻击，每个Connector必须通过以下两种方法之一，验证用于TLS连接的证书是否与DAT匹配：
 
 * Option 1. The connector uses its identity certificate for TLS connections. In this case, the corresponding IDS connector must assure the identifier in the DAT matches the presented certificate.
 * Option 2. The connector uses a separate certificate for TLS connections (e.g., issued by a CA such as Let's Encrypt). In this case, the corresponding IDS Connector must assure the certificate fingerprint matches the one that is embedded in the DAT.
 
+
+* 选项1。连接器使用其身份证书进行TLS连接。在这种情况下，相应的IDS Connector必须确保DAT中的标识符与所呈现的证书匹配。
+* 选项2。连接器使用单独的证书进行TLS连接（例如由Let's Encrypt等CA颁发的）。在这种情况下，相应的IDS Connector必须确保证书指纹与嵌入在DAT中的指纹匹配。
+
 The ParIS only serves untrusted information and thus is not part of this interaction. The DAT will be refreshed on a regular basis, since the token lifetime is limited to a short timeframe. The device identity will be provisioned and refreshed only after expiration (with a long time frame) or in case of revocation. 
+
+ParIS仅提供不受信任的信息，因此不是此交互的一部分。DAT将定期刷新，因为令牌的生命周期仅限于短时间范围内。设备身份将仅在过期（具有长时间范围）或吊销的情况下进行配置和刷新。
 
 ##### Component (Identity) Lifecycle #####
 
@@ -96,7 +134,11 @@ The ParIS only serves untrusted information and thus is not part of this interac
 The IDS can have many participants interacting ranging from large enterprises and organizations to individuals.
 Means for identifying those participants are required, since they are responsible for (at least) operating (or using) an IDS component (e.g., a connector) and thus the actions taken by this component and managing provided data (quality, content, updates, decision on usage policies). Thus, each participants gets a unique identifier (O_UID).
 
+IDS可以有许多参与者进行交互，涉及从大型企业和组织到个人。需要一种识别这些参与者的方法，因为他们负责（至少）操作（或使用）IDS组件（例如连接器），因此该组件所采取的行动和管理所提供的数据（质量，内容，更新，使用政策决策）。因此，每个参与者都获得一个唯一标识符（O_UID）。
+
 Based on this, an identity management for participants can either be based on identities for the organizations themselves or for the human users working for this organizations. Identities are typically bound to private-public key pairs generated for each identity and confirmed by the Identity Provider. Respective processes are required to ensure correct mapping of the key pairs and the identities to be utilized in the IDS. This, however, requires a CA that provides identity certificates for employees of Participants. This is yet to be defined in detail. 
+
+基于此，参与者的身份管理可以基于组织自身或该组织的工作人员的身份。身份通常绑定到为每个身份生成的私钥-公钥对，并由身份提供者确认。必须采取相应的流程来确保正确映射密钥对和要在IDS中使用的身份。但是，这需要提供用于参与者员工的身份证书的CA。需要进一步详细说明这点。
 
 #### Trust Bootstrapping and Trust Chains ####
 
