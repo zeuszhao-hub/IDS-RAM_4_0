@@ -36,11 +36,3 @@ The IDS App Store is a secure platform for distributing IDS Apps. An IDS App Sto
 ##### Figure 3.5.3.1: App Store Architecture
 
 An IDS App Store also consists of an IDS Connector in order to communicate with the Connectors of App Providers and App Users within the Data Space. As a consequence, each instance of an App Store must be compliant to the Connector Certification criteria an provide the functionalities and endpoints of general Connectors together with the above-mentioned operations (e.g. provide a Self-Description, have a valid IDS Identity and use a valid DAT in its communication).
-
-
-NewLoggerWithContext(ctx) -> logger
-
-NewLogger() -> logger
-
-
-Newlogerwircon(ctx).info()
